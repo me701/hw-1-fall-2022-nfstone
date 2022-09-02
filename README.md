@@ -1,4 +1,4 @@
-# ME 701 -- Homework 1 -- Your Name Here
+# ME 701 -- Homework 1 -- Nathan Featherstone
 
 ## Instructions
 
@@ -27,11 +27,9 @@ or Octave).
 
 ### Solution
 
-Write your solution here.  Note, in the past, we've used a full, graphical
-version of Linux.  With WSL, you probably don't have as direct a path for
-exploring software in the Software Manager.  However, use the power of
-Google (or AskJeeves) to explore what sorts of open-source software is out
-there for technical or other applications.
+3-D modeling is something that I do often (at least for work and school).
+An open sourced 3-D modeling software that could be cool is FreeCad which from my brief perusal appears to do modeling similar to SolidWorks. 
+There are others like Blender or Wings 3D (which I tried once but found it hard to get into).
 
 
 ## Problem 3 -- Your CPU
@@ -49,9 +47,10 @@ using `ls > directory_contents.txt` to dump the contents of a directory to a fil
 To display CPU information, I used the following command:
 
 ```bash
-ls -al # <--- that's not right, but it shows you how to include
-       #      code in Markdown!
+lscpu #this command will give a system of computer information
 ```
+
+In this case, I didn't have to redirect anything it wasn't necessary. One could use the sudo command to view as admin, but I don't think it is necessary.
 
 ## Problem 4 -- Resource Hogs
 
@@ -63,7 +62,14 @@ in your writeup.
 
 ### Solution
 
+A great command for this task is top.
 
+```bash
+top #command to see realtime usage information of processes 
+```
+
+The top command will run a user interface that will update automatically. While in the interface, you can press  P to sort by CPU usage and M to sort by memory usage.
+It also displays information on total processing and memory usage.
 
 ## Problem 5 -- `bash`
 
@@ -74,3 +80,19 @@ Where is `bash` located on your Linux system?  And what version of
 determine this information.
 
 ### Solution
+
+To get the file location for bash, I used the following command
+
+```bash
+which bash 
+```
+The which command is only useful for executables. For me, bash is found /usr/bin/bash (that is standard).
+
+To find the version of bash I used the following line.
+
+```bash
+bash --version
+```
+The version flag can be used to find the version information for executables (or at least some of them).
+I have bash version 5.0.17(1).
+
